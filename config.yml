@@ -1,0 +1,8 @@
+nomenclature:
+  name: links
+  verboseName: Links
+description: Some important places to visit
+baseUrls:
+  http: links/
+  static: links/
+isApi: true

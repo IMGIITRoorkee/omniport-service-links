@@ -13,9 +13,7 @@ class LinkSerializer(ModelSerializer):
         """
 
         model = Link
-        fields = [
-            'title',
-            'url',
-            'description',
-            'logo',
+        exclude = [
+            'datetime_created',
+            'datetime_modified',
         ]

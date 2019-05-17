@@ -1,7 +1,8 @@
 from django.db import models
 
-from kernel.models.root import Model
-from kernel.utils.upload_to import UploadTo
+from formula_one.models.base import Model
+from formula_one.utils.upload_to import UploadTo
+from formula_one.validators.aspect_ratio import AspectRatioValidator
 
 
 class Link(Model):
@@ -21,6 +22,9 @@ class Link(Model):
 
     logo = models.ImageField(
         upload_to=UploadTo('links', 'logos'),
+        validators=[
+            AspectRatioValidator(1),
+        ],
         max_length=255,
         blank=True,
         null=True,

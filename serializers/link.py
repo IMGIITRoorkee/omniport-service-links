@@ -1,5 +1,5 @@
 from links.models import Link
-from kernel.serializers.root import ModelSerializer
+from formula_one.serializers.base import ModelSerializer
 
 
 class LinkSerializer(ModelSerializer):

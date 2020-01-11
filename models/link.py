@@ -23,7 +23,7 @@ class Link(Model):
     logo = models.ImageField(
         upload_to=UploadTo('links', 'logos'),
         validators=[
-            AspectRatioValidator(1),
+            AspectRatioValidator(1, 0.1),
         ],
         max_length=255,
         blank=True,
